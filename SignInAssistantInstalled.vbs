@@ -17,15 +17,15 @@ Const TristateUseDefault = -2, TristateTrue = -1, TristateFalse = 0
     'prod Path below
     'params = " /quiet /passive /norestart /log \\localhost\Patches\" & strComputerName & "_SignInIassistant.log"
     'testPath
-    params = " /quiet /passive /norestart /log \\localhost\Patches\" & strComputerName & "_SignInIassistant.log"
+    params = " /quiet /passive /norestart /log \\dc-fas-02\vol1\apps\Inventory\" & strComputerName & "_SignInAssistant.log"
     'Testlab path
     
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
 
 
 'Stephen testlab path
-  logPath =  "\\localhost\Patches\" & strComputerName & ".log"
-  HotfixPath = "\\localhost\Patches\msoidcli_64.msi"
+  logPath =  "\\dc-fas-02\vol1\apps\Inventory\" & strComputerName & "_SignInAssistant.log"
+  HotfixPath = "\\dc-fas-02\vol1\apps\Inventory\msoidcli_64.msi"
 'Production below
   'logPath =  "\\localhost\Patches\"& strComputerName & ".log"
   'set HotfixPath = "\\localhost\Patches\WindowsXP-KB944043-v3-x86-ENU.exe"
