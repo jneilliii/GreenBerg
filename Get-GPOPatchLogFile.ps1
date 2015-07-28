@@ -1,7 +1,7 @@
 ﻿#requires -version 3
 param($path="\\dc-fas-02\vol1\apps\Inventory\")
 "Looking for log files found in $path"
-$patchLogs = Get-ChildItem $path\* -Include *Patch*.txt 
+$patchLogs = Get-ChildItem $path\* -Include *Patch*.log 
 
 
 ForEach ($log in $patchLogs){
