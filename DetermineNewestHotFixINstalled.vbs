@@ -14,16 +14,16 @@ Const TristateUseDefault = -2, TristateTrue = -1, TristateFalse = 0
     strComputer = "."
     patchfound = 0
     'prod Path below
-    'params = " /quiet /passive /norestart /log:" & "\\localhost\Patches\" & strComputerName & "_PatchInstall.log"
+    'params = " /quiet /passive /norestart /log:" & "\\dc-fas-02\vol1\apps\Inventory\" & strComputerName & "_PatchInstall.log"
     'testPath
-    params = " /quiet /passive /norestart /log:" & "\\localhost\Patches\" & strComputerName & "_PatchInventory.log"
+    params = " /quiet /passive /norestart /log:" & "\\dc-fas-02\vol1\apps\Inventory\" & strComputerName & "_PatchInventory.log"
     'Testlab path
     
 Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
 
 
 'Stephen testlab path
-  logPath =  "t:\Patches\" & strComputerName & ".log"
+  logPath =  "\\dc-fas-02\vol1\apps\Inventory\" & strComputerName & "_PatchInventory.log"
 'Production below
   'logPath =  "\\localhost\Patches\"& strComputerName & ".log"
 Const For_Writing = 2
