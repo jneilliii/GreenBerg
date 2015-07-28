@@ -1,7 +1,7 @@
 ﻿#requires -version 3
 param($path="\\dc-fas-02\vol1\apps\Inventory\")
 "Looking for log files found in $path"
-$SSOClientLogs = Get-ChildItem $path\* -Include *SignIn*.txt 
+$SSOClientLogs = Get-ChildItem $path\* -Include *SignIn*.log 
 
 #$patchLogs = Get-childItem "C:\TEMP\Patches\*Patch*.log"
 #$SSOcllogs = Get-childItem "C:\TEMP\Patches\*SignIn*.log"
